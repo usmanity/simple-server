@@ -11,7 +11,7 @@ app.use(function (request, response, next) {
 })
 
 app.get('/', function (request, response) {
-    response.send('Hello');
+    response.send('Hello, Aleena :]');
 });
 
 app.get('/hello', function (request, response) {
