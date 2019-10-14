@@ -1,6 +1,15 @@
 const express = require('express');
 var app = express();
 
+app.use(function (request, response, next) {
+
+    console.log(`Time ${Date.now()}`);
+
+    console.log(request.path);
+    
+    next()
+})
+
 app.get('/', function (request, response) {
     response.send('Hello');
 });
@@ -9,4 +18,11 @@ app.get('/hello', function (request, response) {
     response.sendFile(__dirname + '/public/resume.html');
 });
 
-app.listen(3000);
+
+
+var port =  process.argv[2] || 3000;
+
+app.listen(port, function () {
+    console.log(`Listening on ${port}`);
+});
+
