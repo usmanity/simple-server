@@ -6,7 +6,7 @@ app.use(function (request, response, next) {
     console.log(`Time ${Date.now()}`);
 
     console.log(request.path);
-    
+
     next()
 })
 
@@ -20,9 +20,8 @@ app.get('/hello', function (request, response) {
 
 
 
-var port =  process.argv[2] || 3000;
+var port = process.argv[2] || 80;
 
 app.listen(port, function () {
     console.log(`Listening on ${port}`);
 });
-
