@@ -1,0 +1,187 @@
+/* CSS testing styles on buttons */
+html,
+body {
+    background-color: #ffffff;
+    -webkit-margin: 0;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    color: #403f63;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Roboto Slab', serif;
+}
+
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+.mainContainer {
+
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+
+}
+
+
+#firstName {
+
+    margin-top: 2%;
+    margin-bottom: -1%;
+}
+
+#lastName {
+
+    margin-top: 0;
+    margin-bottom: 1%;
+}
+
+#firstName,
+#lastName {
+    color: #c36891;
+    word-wrap: break-word;
+    font-size: 3em;
+    text-align: center;
+}
+
+h1::first-letter {
+    color: #403f63;
+    font-size: 1.1em;
+    
+}
+
+
+#introParagraph {
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 15px 15px;
+
+}
+
+.holo {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(243, 132, 170, .3);
+    margin: 0 5px;
+    background-color: none;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    transition: .6s;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+.holo::focus {
+    outline: none;
+}
+
+.holo::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translate(-130px) skewX(-15deg);
+}
+
+.holo::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .3);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translate(-130px) scaleX(-15deg);
+}
+
+.holo:hover {
+    background: #74b9e8;
+    cursor: pointer;
+}
+
+#modeIcon {
+    cursor: pointer;
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+    width: 2em;
+    height: 2em;
+    font-size: 1.5em;
+    background: none;
+    border-radius: 50%;
+    border: none;
+}
+
+
+/* When hovering a small tip will pop up */
+button.c1[pop-up-tip]::before {
+    font-family: Arial, Helvetica, sans-serif;
+    content: attr(pop-up-tip);
+    display: block;
+    position: absolute;
+    color: black;
+    border-radius: 30px 20px 3px 20px;
+    font-size: .8em;
+    bottom: 78%;
+    right: 78%;
+    white-space: nowrap;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform ease-out 300ms,
+        right ease-out 400ms;
+}
+
+button.c2[pop-up-tip]::before {
+    font-family: Arial, Helvetica, sans-serif;
+    content: attr(pop-up-tip);
+    display: block;
+    position: absolute;
+    color: white;
+    border-radius: 30px 20px 3px 20px;
+    font-size: .8em;
+    bottom: 78%;
+    right: 78%;
+    white-space: nowrap;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform ease-out 300ms,
+        right ease-out 400ms;
+}
+
+/** for the above hover -> tip show */
+button[pop-up-tip]:hover::before {
+    transform: scale(.75);
+    background: none;
+
+}

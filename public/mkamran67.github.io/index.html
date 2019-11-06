@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style_index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 320px)" href="style_320_index.css">
+    <link rel="stylesheet" type="text/css" media="(min-width: 320px) and (max-width: 720px)" href="style_MM_index.css">
+
+    <title>Landing - M.Kamran</title>
+</head>
+
+<body class="look">
+
+    <!-- The main container will containe the left and right boxes -->
+    <!-- Splitting it up to make it easier for the right side of the screen to split -->
+    <div class="mainContainer">
+
+        <!-- Left box will handle name and a short text intro -->
+        <div class="leftBox">
+            <div id="names">
+                <h1 id="firstName"> Muhammad</h1>
+                <h1 id="lastName"> Kamran</h1>
+            </div>
+
+            <div id="introParagraph">
+                <p>
+                    Hi I'm Muhammad. <br>
+                    <span id="endOfp"> Developer on an adventure, Currently learning about React. 
+                    <br><br> Still working on this 🔨</span>
+
+                </p>
+            </div>
+
+            
+        </div>
+
+        <!-- The Right Box will handle buttons and lower right mode button -->
+        <div class="rightBox">
+
+                <div class="buttonContainer">
+
+                        <!-- <form action="">
+                            <button class="holo" type="submit" id="btn_Contact">Contact</button>
+                        </form>
+                        <form action="">
+                            <button class="holo" type="submit" id="btn_Projects">Projects</button>
+                        </form> -->
+                        <form action="https://github.com/mkamran67">
+                            <button class="holo" type="submit" id="btn_Github"> My Github </button>
+                        </form>
+        
+                    </div>
+        
+                    <div>
+                        <form>
+        
+                            <button id="modeIcon" type="button" pop-up-tip="Click to swap between Day and Night mode.">
+                                🌞
+                            </button>
+        
+                        </form>
+                    </div>
+
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+
+<script src="index.js"></script>
+
+</html>
