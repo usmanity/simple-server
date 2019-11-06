@@ -10,12 +10,12 @@ app.use(function (request, response, next) {
     next()
 })
 
-app.get('/', function (request, response) {
-    response.send('Hello :]');
-});
+// app.get('/', function (request, response) {
+//     response.send('Hello :]');
+// });
 
-app.get('/hello', function (request, response) {
-    response.sendFile(__dirname + '/public/resume.html');
+app.get('/', function (request, response) {
+    response.sendFile(__dirname + '/public/mkamran67.github.io/index.html');
 });
 
 
