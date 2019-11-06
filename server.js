@@ -1,6 +1,9 @@
 const express = require('express');
 var app = express();
 
+app.use('/styles', express.static(__dirname + "/public/mkamran67.github.io/styles"));
+app.use("/js", express.static(__dirname + "/public/mkamran67.github.io/js"));
+
 app.use(function (request, response, next) {
 
     console.log(`Time ${Date.now()}`);
@@ -17,9 +20,6 @@ app.use(function (request, response, next) {
 app.get('/', function (request, response) {
     response.sendFile(__dirname + '/public/mkamran67.github.io/index.html');
 });
-
-app.use(express.static(__dirname + '/styles'));
-app.use(express.static(__dirname + '/js'))
 
 var port = process.argv[2] || 80;
 
