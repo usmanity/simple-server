@@ -18,6 +18,7 @@ app.get('/', function (request, response) {
     response.sendFile(__dirname + '/public/mkamran67.github.io/index.html');
 });
 
+app.use('./styles', express.static(__dirname + '/styles'));
 
 
 var port = process.argv[2] || 80;
